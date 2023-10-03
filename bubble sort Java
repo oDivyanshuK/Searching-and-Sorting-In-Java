@@ -1,0 +1,50 @@
+package learningJava;
+import java.util.*;
+public class bubbleSort {
+
+	public static void main(String[] args) {
+		//bubble sort algorithm of Array
+		
+	     //i+1= j
+		// " "    6   4  3  2  1
+ 
+		
+		//Temp// 		Temp=5
+		
+		
+		
+		Scanner scan = new Scanner(System.in);   //This is scanner class
+		
+		System.out.print("Enter Size of Array:");
+		int size = scan.nextInt();   //variable for allocate size of array
+		int temp = 0;     //this is temporary memory
+		int [] arr = new int[size]; // array 
+		
+		System.out.println("Enter Array Element:");
+		for(int i = 0 ; i < size; i++) { //loop for take array element
+			arr[i] = scan.nextInt(); //take array loop wise
+		}
+		
+		for(int i = 0 ; i < size; i++) {
+			for(int j = i+1; j < size; j++) {
+				
+				//compare with 1st {0! 1)  index of array
+				if(arr[j] < arr[i]) {
+					temp = arr[j];
+					arr[j] = arr[i];
+					arr[i] = temp;
+					
+					
+				}
+
+			}
+			System.out.print(arr[i]);
+		}
+		
+		
+		
+		
+			}
+
+
+}
