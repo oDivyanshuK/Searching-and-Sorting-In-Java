@@ -12,21 +12,24 @@ public class regPract {
 		
 		System.out.print("Enter size of araay:");
 		int size = scan.nextInt();      //this is size or array
+		int mind;
 		int temp = 0;                   // temporary variable for swap
 		int arr [] = new int[size];       // array
 		System.out.println("Enter your array Element:");
 		for(int i = 0 ; i < size; i++) {      
 			arr[i] = scan.nextInt();		//taking input from console on ith element
+		min = i;
 		}
 		//compare with ith index
 		for(int i = 0 ; i < size; i++) {
 			for(int j = i+1; j < size; j++) {
 				
 				//Swap process with temp variable
-				if(arr[j] < arr[i]) {
+				if(arr[j] < arr[min]) {
+					min = j;
 					temp = arr[i];
-					arr[i] = arr[j];
-					arr[j] = temp;
+					arr[i] = arr[min];
+					arr[min] = temp;
 					
 					
 				}
