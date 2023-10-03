@@ -1,49 +1,97 @@
 package learningJava;
+
 import java.util.*;
-public class regPract {
+
+public class selectionSort {
+
+
 
 	public static void main(String[] args) {
+
 		
+
 		
-		// 4  5 3 2 1 sort this array
+
+		// 1 6 4 3 0 2 ort this array
+
 		// temp = (arr[i]) -----
+
 		
+
 		Scanner scan = new Scanner(System.in);   //this is scanner for take input from console
+
 		
+
 		System.out.print("Enter size of araay:");
+
 		int size = scan.nextInt();      //this is size or array
-		int min;
+
+		int minIndex;
+
 		int temp = 0;                   // temporary variable for swap
+
 		int arr [] = new int[size];       // array
+
 		System.out.println("Enter your array Element:");
+
 		for(int i = 0 ; i < size; i++) {      
+
 			arr[i] = scan.nextInt();		//taking input from console on ith element
-		min = i;
+
+		
+
 		}
+
 		//compare with ith index
+
 		for(int i = 0 ; i < size; i++) {
+
+			minIndex = i;
+
 			for(int j = i+1; j < size; j++) {
+
 				
+
 				//Swap process with temp variable
-				if(arr[j] < arr[min]) {
-					min = j;
-					temp = arr[i];
-					arr[i] = arr[min];
-					arr[min] = temp;
+
+				if(arr[j] < arr[minIndex]) {
+
+					minIndex = j;
+
 					
+
 					
+
+					
+
 				}
+
 				
-			}
+
+} /// ise ham loop ke bahar swap kar rhe kyo ki minimum nikalna hai
+
+ 			temp = arr[i];
+
+			arr[i] = arr[minIndex];
+
+			arr[minIndex] = temp;
+
 			System.out.println(arr[i]);	
+
 		}
+
 		
+
 //		for(int i = 0 ; i < size; i++) {
+
 			
+
 			
+
 		}
+
 		
-		
-		
+
 	
+
 }
