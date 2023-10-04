@@ -1,0 +1,43 @@
+package learningJava;
+import java.util.*;
+public class regPract {
+
+	public static void main(String[] args) {
+		
+		
+		// Problem: You have been given two sorted arrays/lists(ARR1 and ARR2) of size N and M respectively, merge them into a third array/list such that the third array is also sorted.
+
+
+		
+			int [] arr1   =  {2,6,9,15};
+			int arr2 [] = {1,4,6,7};
+			int temp = 0;
+		
+			int mergeArray [] = new int[arr1.length+arr2.length];  //this will add value of arr1 and arr2
+			
+			for(int i = 0; i < arr1.length; i++) {
+				mergeArray[i]= arr1[i];
+			}
+			
+			for(int i = 0 ; i < arr2.length; i++) {
+				mergeArray[arr1.length+i] = arr2[i];
+			}
+			
+			for(int i = 0 ; i < mergeArray.length; i++) {
+				for(int j = i+1; j < mergeArray.length; j++) {
+					if(mergeArray[j] < mergeArray[i]) {
+						temp = mergeArray[j];
+						mergeArray[j] = mergeArray[i];
+						mergeArray[i] = temp;
+						
+						
+						
+					}
+				}
+				System.out.println(mergeArray[i]);
+				
+			}
+		
+	
+}
+}
