@@ -1,0 +1,70 @@
+package learningJava;
+
+public class countSmall {
+		// TODO Auto-generated method stub
+	
+				
+		/*You are given two arrays of integers. Let's call the first array A and the second array B. A finds the number of 
+elements in array B that are smaller than or equal to that element for every array element.
+		Example:
+		Input:
+		A = [2, 3, 0]
+		B = [5, 1]
+
+		1) where first array's 2 is greater than 1 then count 1 and print
+		2) int 3 is grater than 1 then count 1 and print 1
+		3) int 0 is not grater than any element's of 2nd array then print zero times
+
+		Output: 
+		[1, 1, 0]*/
+			
+			
+			
+			public static void countSmallElement(int arr1[], int arr2 [], int ans[]) {
+				
+				
+				for(int i  = 0 ; i < arr1.length; i++ ) {
+					
+					for(int j = 0 ; j < arr2.length; j++) {
+
+						
+						if(arr1[i] > arr2[j]) {
+						
+							ans[i]++;
+							
+							
+							
+						}
+						
+					}
+					
+					
+				}
+				for(int i = 0 ; i < ans.length; i++ ) {
+			System.out.print(ans[i]);
+				
+				}
+
+
+				
+
+				
+			}
+			
+			
+			public static void main(String[] args) {
+
+				int arr1[] = {2, 3, 0};
+				int arr2[] = {5, 1};
+				int ans [] = new int[arr1.length];
+				
+				
+			countSmallElement(arr1,arr2,ans);   //this will store ans
+			
+//			for(int i = 0 ; i < ans.length; i++ ) {
+//			System.out.print(ans[i]);
+//				
+//				}
+			}
+	
+}
