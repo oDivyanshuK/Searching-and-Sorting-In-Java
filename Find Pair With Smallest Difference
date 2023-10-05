@@ -1,0 +1,34 @@
+package learningJava;
+
+public class pairSmallest {
+	
+	public static int pairDifference(int arr1[], int arr2 [], int min ) {
+		for(int i = 0 ; i < arr1.length; i++) {
+			for(int j = 0 ; j < arr2.length; j++) {   //iterate from 0th index to arr2 size
+			
+				
+				int difference = Math.abs(arr1[i] - arr2[j]); //difference between 2 arrays
+				//Math.abs is a function for get absolute value instead negative value
+				
+				if(difference < min) {
+					min = difference;     // store difference on min value 
+		
+				}
+	}
+		}
+		return min;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int arr1 [] = {10, 20, 30};
+		int arr2 [] = {17, 15};
+		int min = Integer.MAX_VALUE;    //Initialize min to a maximum integer value, which is Integer.MAX_VALUE function
+		
+		int result = pairDifference(arr1, arr2, min);
+		System.out.println(result);
+	
+				}
+			}
+		
